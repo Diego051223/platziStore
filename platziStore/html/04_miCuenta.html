@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de cuenta de usuario para PlatziStore">
+  <meta name="keywords" content="cuenta, usuario, PlatziStore">
+  <meta name="author" content="Diego Andrés Lopez">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="../css/04_miCuenta.css">
+  <title>Mi Cuenta - PlatziStore</title>
+</head>
+<body>
+<header>
+  <h1>Mi Cuenta</h1>
+</header>
+<main>
+  <section id="accountInfo">
+    <h2>Información de la Cuenta</h2>
+    <form id="accountForm">
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <button type="submit">Actualizar Información</button>
+      </div>
+    </form>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Simulamos la obtención de datos del usuario
+    const userData = {
+      name: 'Juan Pérez',
+      email: 'juan.perez@example.com'
+    };
+
+    // Cargamos los datos en los campos del formulario
+    document.getElementById('name').value = userData.name;
+    document.getElementById('email').value = userData.email;
+  });
+
+  document.getElementById('accountForm').addEventListener('submit', function(event) {
+    // Aquí puedes agregar la lógica de actualización de la cuenta
+    event.preventDefault();
+    alert('Información actualizada');
+  });
+</script>
+</body>
+</html>
